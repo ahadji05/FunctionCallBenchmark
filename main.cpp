@@ -96,9 +96,9 @@ int main( int argc, char *argv[] ) {
                 auto endI = std::chrono::high_resolution_clock::now();
 
                 std::string msg = "Thread " + std::to_string( threadId ) + " timings: " + \
-                    "\tVirtual call: " + std::to_string( std::chrono::duration<double>(endV - startV).count() ) + " s, " + \
-                    "\tNormal call:  " + std::to_string( std::chrono::duration<double>(endN - startN).count() ) + " s, " + \
-                    "\tInline call:  " + std::to_string( std::chrono::duration<double>(endI - startI).count() ) + " s\n";
+                    "\tVirtual call: " + std::to_string( std::chrono::duration<double>(endV - startV).count() / nCalls * 1E9 ) + " ns, " + \
+                    "\tNormal call:  " + std::to_string( std::chrono::duration<double>(endN - startN).count() / nCalls * 1E9 ) + " ns, " + \
+                    "\tInline call:  " + std::to_string( std::chrono::duration<double>(endI - startI).count() / nCalls * 1E9 ) + " ns\n";
 
                 return msg;
             });
