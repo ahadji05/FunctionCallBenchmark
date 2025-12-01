@@ -29,6 +29,9 @@ run_core_0: bench.exe
 run_cores_0and1: bench.exe
 	./bench.exe 0 1
 
+run_cores_0and2: bench.exe
+	./bench.exe 0 2
+
 run_four_cores_even: bench.exe
 	./bench.exe 0 2 4 6
 
