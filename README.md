@@ -20,4 +20,4 @@ A repository dedicated for benchmarking differenent types of function calls on m
 
  - Thread 1 timings: 	Virtual call: 6.50 ns,      Normal call:  5.67 ns,      Inline call:  5.66 ns
 
-*Virtual function has a 12-13% overhead compared to a normal function call when running on a single thread. Multithreading on the same physical core makes each call approximately 30% slower and at the same time hides some of the virtual call latency - the overhead drops to 8%. Multithreading on two physical cores shows the same overhead as without multithreading.*
+*Virtual function has a 12-13% overhead compared to a normal function call when running on a single thread. Multithreading on the same physical core makes each call approximately 30% slower and at the same time hides some of the virtual call latency - the overhead drops to 8%. Multithreading on two physical cores shows the same overhead as without multithreading. In absolute time the v-table lookup cost is in the order of 1 ns.*
