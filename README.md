@@ -1,5 +1,5 @@
 # FunctionCallBenchmark
-We are comparing three types of function calls on a multi-core processor: 1) virtual, 2) normal, 3) inline (no call). The average cost of a virtual function-call is 0.8 ns. The normal function call did not show any overhead compared to the inlined call.
+We are comparing three types of function calls on a multi-core processor: 1) virtual, 2) normal, 3) inline (no call). The average cost of a virtual function-call is 0.8 ns. The normal function call did not show any measurable overhead compared to the inlined call.
 
 ### 10-core 12th Gen Intel(R) Core(TM) i7-12650H - g++ 11.4.0 - ubuntu 22.04.2
 
