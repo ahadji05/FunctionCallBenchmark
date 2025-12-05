@@ -1,5 +1,5 @@
 # FunctionCallBenchmark
-We are comparing three types of function calls on a multi-core processor: 1) virtual, 2) normal, 3) inline (no call). The average cost of a virtual function-call is 0.8 ns. The normal function call did not show any measurable overhead compared to the inlined call.
+I am comparing the latency of three types of function calls on a multi-core processor: 1) virtual, 2) normal, 3) inline (no call). The last one is the reference. In the benchmark I delibarately pin the threads to specific CPU-cores to avoid context switching since this would introduce unpredictable overhead and therefore make the results less reliable. I measure the virtual call latency when running on a single thread, or multiple threads, which are either pinned on the same physical core or not. The processor is heterogeneous as it contains two types of cores: 1) performance (two hardware threads) and 2) efficient cores (one hardware thread). In all experiemnts the virtual call latency was consitently between 0.8 and 1 ns. The normal function call did not show any measurable latency.
 
 ### 10-core 12th Gen Intel(R) Core(TM) i7-12650H - g++ 11.4.0 - ubuntu 22.04.2
 
