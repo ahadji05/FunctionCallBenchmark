@@ -1,6 +1,5 @@
 # FunctionCallBenchmark
-A repository dedicated for benchmarking differenent types of function calls on multi-core processors.
-
+We are comparing three types of function calls on a multi-core processor: 1) virtual, 2) normal, 3) inline (no call).
 
 ### 10-core 12th Gen Intel(R) Core(TM) i7-12650H - g++ 11.4.0 - ubuntu 22.04.2
 
